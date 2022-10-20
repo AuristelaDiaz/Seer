@@ -1,0 +1,23 @@
+<section>
+    <div>
+        <label for="title" class="form-label">Title</label><br>
+        <input required type="text" name="title" class="form-control" id="title" value="<%= article.title%> ">
+    </div>
+    <div>
+        <label for="description" class="form-label">Description</label><br>
+        <textarea class="form-control" name="description" id="description" rows="3"><%= article.description%> </textarea>
+    </div>
+    <div>
+        <label for="markdown" class="form-label">Overview</label><br>
+        <textarea required class="form-control" name="markdown" id="markdown" rows="3" cols="10"><%= article.markdown%></textarea>
+    </div>
+    <br>
+    <div class="botones">
+        <button type="submit">
+            Save
+        </button>
+        <a href="/home">
+            Cancel
+        </a>
+    </div>
+</section>

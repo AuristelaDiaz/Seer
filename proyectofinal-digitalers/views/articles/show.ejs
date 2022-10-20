@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="/public/view.css">
+    <script src="https://kit.fontawesome.com/a617b26d8f.js" crossorigin="anonymous"></script>
+    <title>Blog</title>
+</head>
+<body>
+    <header>
+        <button onclick='history.back()'><i class="fa-solid fa-arrow-left"></i></button>
+    </header>
+    <div class="letras">
+        <div class="a"><i class="fa-solid fa-a"></i></div>
+        <div class="q"><i class="fa-solid fa-q"></i></div>
+        <div class="h"><i class="fa-solid fa-h"></i></div>
+        <div class="g"><i class="fa-solid fa-g"></i></div>
+        <div class="k"><i class="fa-solid fa-k"></i></div>
+        <div class="e"><i class="fa-solid fa-e"></i></div>
+    </div>
+    <div class="articulo">
+        <h1>
+            <%=article.title%>
+        </h1>
+        <h4><%=article.description %></h4>
+        <div class="text-muted mb-3">
+            <%=article.createdAt.toLocaleDateString()%>  
+        </div>
+        <div>
+            <%- article.sanitizedHtml %> 
+        </div>
+    </div>
+</body>
+</html>

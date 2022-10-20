@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <script src="https://kit.fontawesome.com/a617b26d8f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/form.css">
+    <title>New Article</title>
+</head>
+<body>
+    <button onclick='history.back()' class="btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+    <section>
+        <div class="head">
+            <h2>Create your space.</h2>
+            <iframe src="https://player.vimeo.com/video/448735219?api=1&background=1&mute=1&loop=1" width="300px" height="300px" positioning="relative" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+        </div>
+        <div>
+            <div class="container">
+                <form action="/articles" method="POST">
+                    <%- include('_form.ejs') %>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

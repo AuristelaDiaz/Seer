@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/home.css">
+    <script src="https://kit.fontawesome.com/a617b26d8f.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div><i class="fa-solid fa-eye"></i></div>
+        <div>
+            <div><a href="/articles/new"><i class="fa-regular fa-pen-to-square"></i></a></div>
+            <div><a href="/home"><i class="fa-solid fa-house"></i></a></div>
+        </div>
+        <div><a href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+    </div>
+    <div class="body-text">
+        <header>
+            <h1>Seer</h1>
+            <h4>Read, write, and expand your world.</h4>
+            <div class="new-btn">
+                <a href="/articles/new">Write Something!</a>
+            </div>  
+        </header>
+        <section class="articles">
+            <% articles.forEach(article=> { %>
+                <div class="articulo">
+                    <h3>
+                        <%= article.title %>
+                    </h3>
+                    <h5>
+                        <%= article.markdown %>
+                    </h5>
+                    <div>
+                        <h6>
+                            <%=article.createdAt.toLocaleDateString()%>
+                        </h6>
+                        <div class="btn-article">
+                            <a href="articles/<%=article.slug%>" class="verMas">Ver Más</a>
+                            <a href="articles/edit/<%= article.id %>" class="btn btn-warning">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                            <form action="/articles/<%= article.id%>?_method=DELETE" method="POST">
+                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </section>
+    </div>
+    <script src="/public/index.js"></script>
+</body>
+
+</html>

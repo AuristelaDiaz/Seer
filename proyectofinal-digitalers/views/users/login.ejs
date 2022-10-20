@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS Login-->
+    <link rel="stylesheet" href="/public/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Every idea needs a Seer.</h1>
+            <p>A blank page is also a door. At Seer you can walk through it. It's easy and free to share your thinking on any topic, connect with an audience, express yourself with a range of publishing tools, and even earn money for your work.</p>
+        </section>
+        <section>
+            <div class="content">
+                <% if(loginMessage){ %>
+                    <div class="alertLogin"><%= loginMessage %> </div>
+                <% } %> 
+                <div class="text">Sign in to our platform</div>
+                <form action="/users/login" method="post">
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+
+                    <button type="submit">Log in</button>
+                    <br>
+                    <br>
+                    <div>
+                        <span>Not registered? <a href="/users/signup"><strong>Create account</strong></a></span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

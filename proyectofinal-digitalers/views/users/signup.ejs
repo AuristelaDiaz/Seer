@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/login.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="content">
+        <% if(signupMessage){ %>
+            <div class="alertLogin"><%= signupMessage %> </div>
+        <% } %> 
+        <div class="text">Sign up to our platform</div>
+        <form action="/users/signup" method="post">
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="name" name="name" id="name" placeholder="Full Name">
+            </div>
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div><br>
+            <div class="field">
+                <span class="fa fa-lock"></span>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+
+            <button type="submit">Let's go!</button>
+            <br>
+            <br>
+            <div>
+                <span>Already have an account? <a href="/users/login"><strong>Sign in</strong></a></span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

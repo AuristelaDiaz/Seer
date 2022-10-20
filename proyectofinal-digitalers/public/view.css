@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #31344b;
+}
+
+h1{
+    font-size: 5rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+
+body {
+    height: 100%;
+    background: #e6e7ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.articulo{
+    width: 50%;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 2px;
+    box-shadow: -3px -3px 7px #ffffff73,
+    2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.letras{
+    position: relative;
+    height: 100%;
+}
+
+.a, .q, .h, .g, .k, .e{
+    height: 90px;
+    width: 90px;
+    border-radius: 150px;
+    position: absolute;
+    background: #e6e7ee;
+    box-shadow:  14px 14px 27px #bebebe,
+             -14px -14px 27px #ffffff;
+}
+
+.a{top: 7vh; right: 17vh;}
+.q{bottom: 7vh; right: 3vh;}
+.h{top: 10vh; left: 63vw;}
+.g{bottom: 35vh; right: 15vw;}
+.k{bottom: 30vh; left: 65vw;}
+.e{top: 35vh; left: 55vw;}
+
+i{
+    padding: 0.7em;
+    font-size: 40px;
+    text-align: center;
+}
+
+button{
+    position: absolute;
+    top: 0%;
+    background: none;
+    border: none;
+    left: 0%;
+    cursor: pointer;
+}

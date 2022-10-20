@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="/public/edit.css">
+    <script src="https://kit.fontawesome.com/a617b26d8f.js" crossorigin="anonymous"></script>
+    <title>Edit</title>
+</head>
+<body>
+    <button onclick='history.back()' class="btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1>Editing is the new black</h1>
+    <div class="container">
+        <form action="/articles/<%=article.id %>?_method=PUT" method="POST">
+            <%- include('_form.ejs') %>
+        </form>
+    </div>
+    <!--<dialog close>
+        <p>Are you sure?</p>
+        <button onclick="closeButton">
+            <a href="/home">
+                Yes
+            </a>
+        </button>
+    </dialog>-->
+</body>
+</html>

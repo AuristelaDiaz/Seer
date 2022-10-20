@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+
+/* -------BASES------------ */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    background-color:  #e6e7ee;
+    color: #31344b;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+h2{
+    font: 2em;
+    text-align: center;
+}
+
+h5{
+font-weight: 300;
+}
+
+h6{
+    font-weight: 400;
+}
+nav ul li a{
+    font-size: 1em;
+}
+
+
+/*-HEADER-NAV-HERO */
+
+.hero{
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5em;
+}
+.hero p{
+    font-size: 0.9em;
+}
+.icon{
+    height: 300px;
+    width: 300px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow:  20px 20px 60px #c4c4ca,
+    -20px -20px 60px #ffffff;
+    position: relative;
+}
+.icon i{
+    font-size: 10em;
+    position: absolute;
+    top: 0.4em;
+    left: 0.4em;
+}
+
+.signup{
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+    box-shadow:  20px 20px 60px #c4c4ca,
+                 -20px -20px 60px #ffffff;
+}
+
+.signup:hover{
+    background: linear-gradient(225deg, #cfd0d6, #f6f7ff);
+    box-shadow:  -19px 19px 38px #c4c4ca,
+                 19px -19px 38px #ffffff;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    color: #31344b;
+    font: 2em sans-serif;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li:first-child{
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    border-radius: 39px;
+    background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+    box-shadow:  10px 10px 17px #b3b4ba,
+                 -10px -10px 17px #ffffff;
+}
+
+nav ul li:first-child:hover{
+    background: linear-gradient(225deg, #cfd0d6, #f6f7ff);
+    box-shadow:  -19px 19px 38px #c4c4ca,
+                 19px -19px 38px #ffffff;
+}
+
+/*-MAIN-SECTION-*/
+
+main{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.articles{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 2px;
+}
+.articles a{
+    text-align: end;
+}
+
+.articles div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/*-FOOTER- */
+
+footer{
+    position:fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width:100%;
+    text-align: center;
+}
